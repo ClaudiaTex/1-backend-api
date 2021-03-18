@@ -42,7 +42,7 @@ Eliminado lógico de un user según el dni que se pase como parámetro.
 - method: DELETE
 - route: /user/:dni
 
-### Herramientas utilizadas:
+## Herramientas utilizadas:
 
 - NodeJS
 - Express
