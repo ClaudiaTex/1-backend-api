@@ -41,3 +41,11 @@ Actualizará los datos de un user que haga match con el dni enviado como p
 Eliminado lógico de un user según el dni que se pase como parámetro.
 - method: DELETE
 - route: /user/:dni
+
+### Herramientas utilizadas:
+
+- NodeJS
+- Express
+- Nodemon
+- Morgan
+- Postman
