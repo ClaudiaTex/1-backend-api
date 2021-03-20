@@ -1,5 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
+const usersData = require('./users.json');
+const fs = require('fs');
 
 //SERVER
 const app = express();
