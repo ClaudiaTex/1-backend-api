@@ -22,6 +22,9 @@ app.post('/user', controller.createUser);
 //READ all (route0)
 app.get('/users', controller.getUsers);
 
+//READ one by dni (route1)
+app.get('/users/:dni', controller.getUser);
+
 
 //PORT
 app.listen(app.get('port'), () =>{

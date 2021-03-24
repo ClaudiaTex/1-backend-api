@@ -36,8 +36,22 @@ const createUser = (req, res) => {
         res.sendFile(getAllUsers);
     };
 
+    const getUser = (req,res) =>{
+        const paramDNI = req.params.dni;
+        const userFind = usersData.users.find(user => user.dni  === paramDNI);
+        if(userFind){
+            response2 = userFind;
+        } else {
+            response2 = `Usuario no existente.`
+        }
+        res.send(response2);
+    };
+
+
 module.exports = {
     hello,
     createUser,
-    getUsers
+    getUsers,
+    getUser
+    
 };
