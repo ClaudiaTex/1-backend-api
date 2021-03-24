@@ -19,6 +19,9 @@ app.get('/', controller.hello);
 //CREATE
 app.post('/user', controller.createUser);
 
+//READ all (route0)
+app.get('/users', controller.getUsers);
+
 
 //PORT
 app.listen(app.get('port'), () =>{

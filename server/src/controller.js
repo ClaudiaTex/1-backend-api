@@ -30,7 +30,14 @@ const createUser = (req, res) => {
         res.send(response);
     };
 
+    //READ
+    const getUsers = (req, res) =>{
+        const getAllUsers = model.getAll(usersData);
+        res.sendFile(getAllUsers);
+    };
+
 module.exports = {
     hello,
-    createUser
+    createUser,
+    getUsers
 };

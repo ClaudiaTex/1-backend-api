@@ -1,5 +1,6 @@
 const usersData = require('./users.json');
 const fs = require('fs');
+const path = require('path');
 
 //DNI VALIDATION
 
@@ -25,8 +26,17 @@ const saveUser = usersData => {
     })
 }
 
+
+//ALL USERS
+
+const getAll = usersData => {
+    const usersFile = path.join(__dirname, 'users.json');
+    return usersFile
+}
+
 module.exports = {
     isValidDNI,
     usedDNI,
-    saveUser
+    saveUser,
+    getAll
 }
