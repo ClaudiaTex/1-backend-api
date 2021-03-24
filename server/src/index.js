@@ -15,20 +15,10 @@ app.use(morgan('dev'));
 //ENDPOINTS
 
 app.get('/', controller.hello);
-
-//CREATE
 app.post('/user', controller.createUser);
-
-//READ all (route0)
 app.get('/users', controller.getUsers);
-
-//READ one by dni (route1)
 app.get('/users/:dni', controller.getUser);
-
-//UPDATE
 app.put('/user/:dni', controller.updateUser);
-
-//DELETE
 app.delete('/user/:dni', controller.deleteUser);
 
 
