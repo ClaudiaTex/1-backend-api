@@ -16,6 +16,8 @@ app.use(morgan('dev'));
 
 app.get('/', controller.hello);
 
+//CREATE
+app.post('/user', controller.createUser);
 
 
 //PORT
