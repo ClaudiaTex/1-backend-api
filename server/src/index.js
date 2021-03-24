@@ -25,6 +25,9 @@ app.get('/users', controller.getUsers);
 //READ one by dni (route1)
 app.get('/users/:dni', controller.getUser);
 
+//UPDATE
+app.put('/user/:dni', controller.updateUser);
+
 
 //PORT
 app.listen(app.get('port'), () =>{
