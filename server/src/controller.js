@@ -65,6 +65,21 @@ const updateUser = (req,res) =>{
     }
     res.send(response3);
 };
+
+//DETELE
+const deleteUser = (req,res) =>{
+    const paramDNI = req.params.dni;
+    const userIndex = usersData.users.findIndex(user => user.dni  === paramDNI);
+
+    if (userIndex >= 0){ 
+        usersData.users.splice(userIndex, 1);
+        model.saveUser(usersData);
+        response4 = `Usuario con DNI ${paramDNI} borrado.`
+    } else if (userIndex < 0) { 
+        response4 = 'DNI no encontrado.'
+    }
+    res.send(response4);
+};
     
 
 
@@ -73,6 +88,7 @@ module.exports = {
     createUser,
     getUsers,
     getUser,
-    updateUser
+    updateUser,
+    deleteUser
     
 };

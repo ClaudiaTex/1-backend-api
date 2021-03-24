@@ -28,6 +28,9 @@ app.get('/users/:dni', controller.getUser);
 //UPDATE
 app.put('/user/:dni', controller.updateUser);
 
+//DELETE
+app.delete('/user/:dni', controller.deleteUser);
+
 
 //PORT
 app.listen(app.get('port'), () =>{
