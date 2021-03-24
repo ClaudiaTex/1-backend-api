@@ -1,7 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
-const usersData = require('./users.json');
-const fs = require('fs');
+const controller = require('./controller');
 
 //SERVER
 const app = express();
@@ -15,14 +14,7 @@ app.use(morgan('dev'));
 
 //ENDPOINTS
 
-app.get('/', (req,res) =>{
-    res.send('Hello world!')
-})
-
-
-
-
-
+app.get('/', controller.hello);
 
 
 
